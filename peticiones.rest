@@ -1,0 +1,41 @@
+@host = http://localhost:3000
+
+
+### Crear un autor. OK
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Vanesita",
+    "email": "Vanesita@gmail.com",
+    "imagen": "https://inteligencianarrativa.com/wp-content/uploads/2015/05/como-ser-escritor.jpg"
+}
+
+
+### Obtener todos los autores. OK
+GET {{host}}/api/autores
+
+
+### Recuperar los diferentes posts escritos por un autor por su id. OK
+GET {{host}}/api/autores/2
+
+
+### Crear un post. OK
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo": "Bye bye", 
+    "descripcion": "Va a ir ok",
+    "categoria": "Drama",
+    "autor_id": "8"
+}
+
+
+### Obtener todos los post. OK
+GeT {{host}}/api/posts
+
+### Obtener un post por su id con todos los datos de su autor. OK
+GET {{host}}/api/posts/3
+
+

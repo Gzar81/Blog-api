@@ -1,5 +1,5 @@
 const create = ({ nombre, email, imagen }) => {
-    return db.query('insert into profesores (nombre, email, imagen) values (?,?,?)',
+    return db.query('insert into autores (nombre, email, imagen) values (?,?,?)',
         [nombre, email, imagen]);
 }
 
@@ -9,7 +9,7 @@ const getAllAutors = () => {
 }
 
 //Recupera un autor por su id
-const getAutorById = () => {
+const getAutorById = (autorId) => {
     return db.query(`
     SELECT *
     FROM autores
@@ -18,6 +18,6 @@ const getAutorById = () => {
 }
 
 module.exports = {
-    getAllAutors, getAutorById
+    create, getAllAutors, getAutorById
 }
 
