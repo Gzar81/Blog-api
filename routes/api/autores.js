@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 })
 
 // Obtener un autor por su id con todos sus posts.
-router.get('/:autorId', async (req, res) => {
+router.get('/posts/:autorId', async (req, res) => {
     try {
         const { autorId } = req.params;
         const [posts] = await getPostByAutorId(autorId)
@@ -37,7 +37,7 @@ router.get('/:autorId', async (req, res) => {
     }
 });
 
-/* // Obtener un autor por su id.
+// Obtener un autor por su id.
 router.get('/:autorId', async (req, res) => {
     const { autorId } = req.params;
     try {
@@ -50,7 +50,7 @@ router.get('/:autorId', async (req, res) => {
         res.json({ fatal: error.messaje });
     }
 
-}) */
+})
 
 
 module.exports = router;

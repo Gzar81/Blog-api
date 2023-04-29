@@ -16,8 +16,12 @@ Content-Type: application/json
 GET {{host}}/api/autores
 
 
-### Recuperar los diferentes posts escritos por un autor por su id. OK
+### Obtener un autor por su id.
 GET {{host}}/api/autores/2
+
+
+### Recuperar los diferentes posts escritos por un autor por su id. OK
+GET {{host}}/api/autores/posts/2
 
 
 ### Crear un post. OK
@@ -25,7 +29,7 @@ POST {{host}}/api/posts
 Content-Type: application/json
 
 {
-    "titulo": "Bye bye", 
+    "titulo": "Bye bye love 2", 
     "descripcion": "Va a ir ok",
     "categoria": "Drama",
     "autor_id": "8"
@@ -36,6 +40,6 @@ Content-Type: application/json
 GeT {{host}}/api/posts
 
 ### Obtener un post por su id con todos los datos de su autor. OK
-GET {{host}}/api/posts/3
+GET {{host}}/api/posts/1
 
 

@@ -1,3 +1,4 @@
+//Crear un autor
 const create = ({ nombre, email, imagen }) => {
     return db.query('insert into autores (nombre, email, imagen) values (?,?,?)',
         [nombre, email, imagen]);

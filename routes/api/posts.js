@@ -40,16 +40,5 @@ router.get('/:postId', async (req, res) => {
 
 })
 
-/* // Obtener todos los posts de un autor por su id.
-router.get('/:autorId', async (req, res) => {
-    try {
-        const { autorId } = req.params;
-        const [posts] = await getPostByAutorId(autorId)
-        res.json(posts);
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({ error: 'Error al obtener los posts del autor' });
-    }
-}); */
 
 module.exports = router;
