@@ -1,4 +1,4 @@
-const { getAllPosts, getPostById, create, getPostByAutorId } = require('../../models/post.model');
+const { getAllPosts, getPostById, create } = require('../../models/post.model');
 
 const router = require('express').Router();
 
